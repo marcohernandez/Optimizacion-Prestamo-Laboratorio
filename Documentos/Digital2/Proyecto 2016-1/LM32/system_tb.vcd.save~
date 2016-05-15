@@ -1,0 +1,23 @@
+[*]
+[*] GTKWave Analyzer v3.3.58 (w)1999-2014 BSI
+[*] Mon Apr 18 17:32:01 2016
+[*]
+[dumpfile] "/home/marco/Documentos/Digital2/Proyecto 2016-1/LM32_(115200 uart)/simulation/system_tb.vcd"
+[dumpfile_mtime] "Mon Apr 18 17:30:20 2016"
+[dumpfile_size] 249560
+[savefile] "/home/marco/Documentos/Digital2/Proyecto 2016-1/LM32_(115200 uart)/system_tb.vcd.save.sav"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-25.886703 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 223
+[signals_width] 94
+[sst_expanded] 1
+[sst_vpaned_height] 160
+@28
+system_tb.uart_rxd
+system_tb.uart_txd
+@29
+system_tb.clk
+[pattern_trace] 1
+[pattern_trace] 0

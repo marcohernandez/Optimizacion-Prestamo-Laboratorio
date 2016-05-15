@@ -1,0 +1,187 @@
+#include "soc-hw.h"
+
+
+uint32_t key_read(){
+
+	int case1 = 1;
+	int case2 = 1;
+	uint32_t dato = 0;
+	uint32_t clave = 0;
+	
+
+	int bandera1 = 0;
+	int bandera2 = 0;
+	int bandera3 = 0;
+	int bandera4 = 0;
+	
+
+
+	int temp1 = 0;
+	int temp2 = 0;
+	int temp3 = 0;
+	int temp4 = 0;
+	int temp5 = 0;
+	int temp6 = 0;
+	int temp7 = 0;
+	int temp8 = 0;
+
+	int i = 2;
+
+	for(i=2; i>1; i++){
+//==========================================================================================//
+//=============================== key matricial ============================================//
+
+		sleep(100);
+
+		temp1 = bandera1;
+		temp2 = bandera2;
+		temp3 = bandera3;
+		temp4 = bandera4;
+		
+		switch (case1){
+    			case 1:	write_fila(1);
+				case2 = read_columna();
+				switch (case2){
+	   				case 1:	dato = 1;
+						bandera1 = 1;
+						break;
+		    			case 2: dato = 2;
+						bandera1 = 1;
+						break;
+			    		case 4:	dato = 3;
+						bandera1 = 1;
+						break;
+		    			
+					default:	dato = dato;
+							bandera1 = 0;
+							break;
+				}
+				break;
+    			case 2: write_fila(2);
+				case2 = read_columna();
+				switch (case2){
+	    				case 1:	dato = 4;
+						bandera2 = 1;
+						break;
+			    		case 2: dato = 5;
+						bandera2 = 1;
+						break;
+		    			case 4:	dato = 6;
+						bandera2 = 1;
+						break;
+			    		
+					default:	dato = dato;
+							bandera2 = 0;
+							break;
+				}
+				break;
+	    		case 3:	write_fila(4);
+				case2 = read_columna();
+				switch (case2){
+	    				case 1:	dato = 7;
+						bandera3 = 1;
+						break;
+		    			case 2: dato = 8;
+						bandera3 = 1;
+						break;
+			    		case 4:	dato = 9;
+						bandera3 = 1;
+						break;
+		    			
+					default:	dato = dato;
+							bandera3 = 0;
+							break;
+				}
+				break;
+    			case 4:	write_fila(8);
+				case2 = read_columna();
+				switch (case2){
+	    				case 1:	dato = 0;
+						bandera4 = 1;
+						break;
+			    		case 2: dato = 0;
+						bandera4 = 1;
+						break;
+		    			case 4:	dato = 0;
+						bandera4 = 1;
+						break;
+			    		
+					default:	dato = dato;
+							bandera4 = 0;
+							break;
+				}
+				break;
+			default:	write_fila(0);
+					break;
+		}
+
+		temp5 = bandera1;
+		temp6 = bandera2;
+		temp7 = bandera3;
+		temp8 = bandera4;
+
+ if ((temp1 == 0 && temp5 == 0)||(temp1 == 1 && temp5 == 1)||(temp2 == 0 && temp6 == 0)||(temp2 == 1 && temp6 == 1)||(temp3 == 0 && temp7 == 0)||(temp3 == 1 && temp7 == 1)||(temp4 == 0 && temp8 == 0)||(temp4 == 1 && temp8 == 1)){
+
+                                                                                        }
+   if((temp1 == 0 && temp5 == 1)||(temp2 == 0 && temp6 == 1)||(temp3 == 0 && temp7 == 1)||(temp4 == 0 && temp8 == 1)){
+			clave = dato;
+				i = 0;
+					
+		}		
+
+		if (case1 == 4){
+			case1 = 0;
+		}
+
+		case1 = case1 + 1;
+	}
+	return clave;
+}
+
+void pintar_numero_key(uint32_t clave){
+
+	uint32_t num1=0;
+
+	num1=clave;		
+
+	uart_putstr("\r\n");
+
+	uart_putchar(num1+48);
+	
+}
+
+
+
+
+	
+
+int main(int argc, char **argv){
+uint32_t select=0;    
+
+for(;;){
+
+	uart_putstr("\r\n/////////////////////////////////////////////////////\r");
+	uart_putstr("\r\n///                                               ///\r");
+	uart_putstr("\r\n///   Sistema Prestamo de Equipos UNAl            ///\r");
+	uart_putstr("\r\n///                                               ///\r");
+	uart_putstr("\r\n/////////////////////////////////////////////////////\r\n\n");
+	uart_putstr("\r\nSeleccione una opcion\r");
+	uart_putstr("\r\n1.Prestar equipos\r");
+	uart_putstr("\r\n2.Devolucion equipos\r");
+	uart_putstr("\r\n3.Historial estudiante\r");
+	select= key_read();
+
+	pintar_numero_key(select);
+	switch (select){
+               	case 1:                                        
+               uart_putstr("\r\nPase el carnet por el lector.\r\n\n"); 		
+               break;  
+               case 2: 
+               uart_putstr("\r\n  Leer equipos a devolver  \r\n\n");        
+	       	break; 
+                default:   uart_putstr("\r\n  Leer equipos  \r\n\n");  	
+                        } 
+
+                                
+        }     
+		               }  

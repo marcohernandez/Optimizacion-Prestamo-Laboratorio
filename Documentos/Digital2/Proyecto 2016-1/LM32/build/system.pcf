@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Apr 26 12:39:22 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "ps2_dat_in" LOCATE = SITE "K2" LEVEL 1;
+COMP "JDin<1>" LOCATE = SITE "H1" LEVEL 1;
+COMP "JDin<2>" LOCATE = SITE "G1" LEVEL 1;
+COMP "JDin<3>" LOCATE = SITE "G3" LEVEL 1;
+COMP "JDin<0>" LOCATE = SITE "H4" LEVEL 1;
+COMP "rst" LOCATE = SITE "E16" LEVEL 1;
+COMP "ps2_clk_in" LOCATE = SITE "E7" LEVEL 1;
+COMP "JDout<3>" LOCATE = SITE "F3" LEVEL 1;
+COMP "JDout<1>" LOCATE = SITE "G4" LEVEL 1;
+COMP "JDout<2>" LOCATE = SITE "G2" LEVEL 1;
+COMP "JDout<0>" LOCATE = SITE "H2" LEVEL 1;
+COMP "uart_led" LOCATE = SITE "P2" LEVEL 1;
+COMP "uart_txd" LOCATE = SITE "D4" LEVEL 1;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "uart_rxd" LOCATE = SITE "C4" LEVEL 1;
+SCHEMATIC END;
+

@@ -1,0 +1,7 @@
+INFILE=/home/marco/Documentos/Digital2/Proyecto 2016-1/LM32/build/system-routed.ncd
+OUTFILE=/home/marco/Documentos/Digital2/Proyecto 2016-1/LM32/build/system.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=/home/marco/Documentos/Digital2/Proyecto 2016-1/LM32/build
+LICENSE=WebPack
+USER_INFO=211018137_0_0_215

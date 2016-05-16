@@ -142,14 +142,14 @@ char uart1_read()
 }
 char uart_getchar()
 {   
-	while (! (uart0->ucr & UART_DR)) ;
-	return uart0->rxtx;
+	while (! (uart1->ucr & UART_DR)) ;
+	return uart1->rxtx;
 }
 
 void uart_putchar(char c)
 {
-	while (uart0->ucr & UART_BUSY) ;
-	uart0->rxtx = c;
+	while (uart1->ucr & UART_BUSY) ;
+	uart1->rxtx = c;
 }
 
 void uart_putstr(char *str)

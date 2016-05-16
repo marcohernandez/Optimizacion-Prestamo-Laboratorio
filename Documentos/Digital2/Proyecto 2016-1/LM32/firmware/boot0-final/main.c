@@ -160,27 +160,35 @@ uint32_t select=0;
 
 for(;;){
 
-	uart_putstr("\r\n/////////////////////////////////////////////////////\r");
-	uart_putstr("\r\n///                                               ///\r");
-	uart_putstr("\r\n///   Sistema Prestamo de Equipos UNAl            ///\r");
-	uart_putstr("\r\n///                                               ///\r");
-	uart_putstr("\r\n/////////////////////////////////////////////////////\r\n\n");
-	uart_putstr("\r\nSeleccione una opcion\r");
-	uart_putstr("\r\n1.Prestar equipos\r");
-	uart_putstr("\r\n2.Devolucion equipos\r");
-	uart_putstr("\r\n3.Historial estudiante\r");
-	select= key_read();
+	uart_putstr("\r\n                **********************************  \r");
+	uart_putstr("\r\n         **********      **************     **********   \r");
+	uart_putstr("\r\n  *************    SISTEMA PRESTAMO EQUIPOS UNAL    ************* \r");
+	uart_putstr("\r\n         **********      **************     **********    \r");
+	uart_putstr("\r\n                **********************************  \r\n\n");
+
+	uart_putstr("\r\n   Seleccione una opcion    \r");
+
+	uart_putstr("\r\n              1.Prestar equipos         \r");
+	uart_putstr("\r\n              2.Devolucion equipos          \r");
+	uart_putstr("\r\n              3.Historial estudiante           \r");
+	
+           select= key_read();
 
 	pintar_numero_key(select);
 	switch (select){
-               	case 1:                                        
-               uart_putstr("\r\nPase el carnet por el lector.\r\n\n");
-                 		
-               break;  
-               case 2: 
-               uart_putstr("\r\n  Leer equipos a devolver  \r\n\n");        
-	       	break; 
-                default:   uart_putstr("\r\n  Leer equipos  \r\n\n");  	
+              case 1:                                        
+                        uart_putstr("\r\n  Pase el carnet por el lector RFID.  \r\n\n");                 		
+              break;
+  
+              case 2: 
+                       uart_putstr("\r\n  Leer equipos a devolver  \r\n\n");        
+	       break;
+ 
+              case 3:
+                       uart_putstr("\r\n  Historila de los equipos prestados  \r\n\n");
+	       break;
+
+                default:   uart_putstr("\r\n  Entrada no disponible  \r\n\n");  	
                         } 
 
                                 

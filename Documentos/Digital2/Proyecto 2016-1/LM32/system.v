@@ -407,8 +407,8 @@ wb_uart #(
 	.wb_sel_i( uart1_sel ),
 	.wb_ack_o( uart1_ack ), 
 //	.intr(       uart0_intr ),
-	.uartt_rxd( uart1_rxd ),
-	.uartt_txd( uart1_txd )
+	.uart_rxd( uart1_rxd ),
+	.uart_txd( uart1_txd )
 );
 
 assign uartt_txd  = uart1_txd;

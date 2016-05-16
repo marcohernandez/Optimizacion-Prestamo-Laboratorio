@@ -56,21 +56,7 @@ uart #(
 	.tx_data(   tx_data  ),
 	.tx_wr(     tx_wr    ),
 	.tx_busy(   tx_busy  )
- uart1 (
-	.clk(       clk      ),
-	.reset(     reset    ),
-	//
-	.uart_rxd(  uartt_rxd ),
-	.uart_txd(  uartt_txd ),
-	//
-	.rx_data(   rx_data  ),
-	.rx_avail(  rx_avail ),
-	.rx_error(  rx_error ),
-	.rx_ack(    rx_ack   ),
-	.tx_data(   tx_data  ),
-	.tx_wr(     tx_wr    ),
-	.tx_busy(   tx_busy  )
-);
+ );
 
 //---------------------------------------------------------------------------
 // 
